@@ -45,7 +45,7 @@ export function Hero() {
         style={{ y: photoY, scale: photoScale }}
       >
         <Image
-          src="/herosectionlaksmi.jpg"
+          src="/herosectionLaksmi.jpg"
           alt=""
           fill
           priority
