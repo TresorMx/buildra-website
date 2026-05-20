@@ -77,7 +77,7 @@ export function Servicios() {
               />
 
               {s.badge && (
-                <span className="absolute right-6 top-6 rounded-full bg-accent px-2.5 py-1 text-[8px] font-medium uppercase tracking-[0.22em] text-base">
+                <span className="absolute right-6 top-6 rounded-full bg-accent px-2.5 py-1 text-[8px] font-medium uppercase tracking-[0.22em] text-[#0A0A0A]">
                   {t(s.badge)}
                 </span>
               )}

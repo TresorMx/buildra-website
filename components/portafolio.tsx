@@ -73,7 +73,7 @@ function ProyectoCard({
           )}
 
           {/* status pill */}
-          <div className="absolute left-5 top-5 z-[3] rounded-full bg-ink/95 px-3 py-1.5 text-[8px] font-medium uppercase tracking-[0.22em] text-base">
+          <div className="absolute left-5 top-5 z-[3] rounded-full bg-ink/95 px-3 py-1.5 text-[8px] font-medium uppercase tracking-[0.22em] text-[#0A0A0A]">
             {t(portafolio.status)}
           </div>
 

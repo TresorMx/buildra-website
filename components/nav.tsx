@@ -50,7 +50,7 @@ export function Nav() {
 
         <a
           href="#form"
-          className="hidden items-center gap-2 rounded-full bg-ink px-4 py-2.5 text-[8px] font-medium uppercase tracking-[0.18em] text-base transition-all duration-300 hover:-translate-y-px hover:bg-accent md:inline-flex"
+          className="hidden items-center gap-2 rounded-full bg-ink px-4 py-2.5 text-[8px] font-medium uppercase tracking-[0.18em] text-[#0A0A0A] transition-all duration-300 hover:-translate-y-px hover:bg-accent md:inline-flex"
         >
           <span>{t(navCopy.cta)}</span>
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-2.5 w-2.5">

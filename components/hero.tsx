@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 import { useI18n } from "@/lib/i18n";
 import { hero, site } from "@/lib/content";
 import { BuildraLogo } from "./ui/buildra-logo";
@@ -40,19 +41,31 @@ export function Hero() {
       {/* Photo layer (B&W, 25% opacity, with subtle parallax) */}
       <motion.div
         aria-hidden
-        className="absolute inset-0 z-0"
-        style={{
-          y: photoY,
-          scale: photoScale,
-          backgroundImage:
-            "linear-gradient(180deg, rgba(10,10,10,0.20) 0%, rgba(10,10,10,0.55) 100%), url('/herosectionlaksmi.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          filter: "grayscale(100%) contrast(1.05)",
-          opacity: 0.25,
-        }}
-      />
+        className="absolute inset-0 z-0 overflow-hidden"
+        style={{ y: photoY, scale: photoScale }}
+      >
+        <Image
+          src="/herosectionlaksmi.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+          style={{
+            filter: "grayscale(100%) contrast(1.05)",
+            opacity: 0.25,
+          }}
+        />
+        {/* gradient overlay */}
+        <div
+          aria-hidden
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(10,10,10,0.20) 0%, rgba(10,10,10,0.55) 100%)",
+          }}
+        />
+      </motion.div>
 
       {/* Grid pattern */}
       <div
