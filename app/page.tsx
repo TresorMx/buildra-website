@@ -9,6 +9,7 @@ import { LeadForm } from "@/components/form/lead-form";
 import { Footer } from "@/components/footer";
 import { WhatsAppFloat } from "@/components/whatsapp-float";
 import { MobileSticky } from "@/components/mobile-sticky";
+import { AdvisorChat } from "@/components/advisor-chat";
 
 export default function HomePage() {
   return (
@@ -26,6 +27,7 @@ export default function HomePage() {
       </main>
       <WhatsAppFloat />
       <MobileSticky />
+      <AdvisorChat />
     </>
   );
 }
