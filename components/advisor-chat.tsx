@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useId } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const CALENDAR_URL =
@@ -30,29 +31,19 @@ function DanielaAvatar({ size = 40 }: { size?: number }) {
       className="relative flex-shrink-0 rounded-full"
       style={{ width: size, height: size }}
     >
-      {/* Background gradient */}
+      {/* Photo */}
       <div
-        className="absolute inset-0 rounded-full"
-        style={{
-          background:
-            "linear-gradient(135deg, #1a1a14 0%, #222218 100%)",
-          border: "1.5px solid #C9A96E",
-        }}
-      />
-      {/* Letter D */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <span
-          style={{
-            fontFamily: "var(--font-geist), system-ui, sans-serif",
-            fontSize: size * 0.38,
-            fontWeight: 500,
-            color: "#C9A96E",
-            letterSpacing: "-0.01em",
-            lineHeight: 1,
-          }}
-        >
-          D
-        </span>
+        className="absolute inset-0 overflow-hidden rounded-full"
+        style={{ border: "1.5px solid #C9A96E" }}
+      >
+        <Image
+          src="/daniela.jpg"
+          alt="Daniela — Asesora BUILDRA"
+          fill
+          sizes={`${size * 2}px`}
+          className="object-cover object-center"
+          priority
+        />
       </div>
       {/* Online dot */}
       <span
@@ -556,23 +547,23 @@ export function AdvisorChat() {
                 <path d="M4 4l8 8M12 4l-8 8" />
               </motion.svg>
             ) : (
-              <motion.span
-                key="d"
+              <motion.div
+                key="photo"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.18 }}
-                style={{
-                  fontFamily: "var(--font-geist), system-ui, sans-serif",
-                  fontSize: 22,
-                  fontWeight: 500,
-                  color: "#C9A96E",
-                  letterSpacing: "-0.01em",
-                  lineHeight: 1,
-                }}
+                className="absolute inset-0 overflow-hidden rounded-full"
               >
-                D
-              </motion.span>
+                <Image
+                  src="/daniela.jpg"
+                  alt="Daniela"
+                  fill
+                  sizes="58px"
+                  className="object-cover object-center"
+                  priority
+                />
+              </motion.div>
             )}
           </AnimatePresence>
           {/* Online dot on button */}
