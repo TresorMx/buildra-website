@@ -346,7 +346,8 @@ export function AdvisorChat() {
             {/* Messages */}
             <div
               className="flex-1 overflow-y-auto px-4 py-4 space-y-3"
-              style={{ minHeight: 0, maxHeight: "360px" }}
+              style={{ minHeight: 0, maxHeight: "360px", overscrollBehavior: "contain" }}
+              data-lenis-prevent
             >
               {messages.map((msg) => (
                 <div
