@@ -7,7 +7,6 @@ import { Servicios } from "@/components/servicios";
 import { Portafolio } from "@/components/portafolio";
 import { LeadForm } from "@/components/form/lead-form";
 import { Footer } from "@/components/footer";
-import { WhatsAppFloat } from "@/components/whatsapp-float";
 import { MobileSticky } from "@/components/mobile-sticky";
 import { AdvisorChat } from "@/components/advisor-chat";
 
@@ -25,7 +24,6 @@ export default function HomePage() {
         <LeadForm />
         <Footer />
       </main>
-      <WhatsAppFloat />
       <MobileSticky />
       <AdvisorChat />
     </>

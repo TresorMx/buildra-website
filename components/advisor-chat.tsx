@@ -287,7 +287,7 @@ export function AdvisorChat() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.96 }}
             transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed bottom-[88px] right-6 z-50 hidden w-[360px] flex-col overflow-hidden rounded-[20px] md:flex"
+            className="fixed bottom-[88px] right-3 z-50 flex w-[calc(100vw-24px)] flex-col overflow-hidden rounded-[20px] md:right-6 md:w-[360px]"
             style={{
               background: "#111111",
               border: "1px solid rgba(255,255,255,0.08)",
@@ -516,7 +516,7 @@ export function AdvisorChat() {
       </AnimatePresence>
 
       {/* ── Floating button ── */}
-      <div className="fixed bottom-6 right-[88px] z-50 hidden md:block">
+      <div className="fixed bottom-[88px] right-3 z-50 md:bottom-6 md:right-[88px]">
         {/* Pulse ring */}
         {pulsed && !isOpen && (
           <motion.span
